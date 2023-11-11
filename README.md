@@ -1,2 +1,2 @@
-# Gene calculator for the video game rust
-Description is comming soon
+# Rust Game Gene Calculator
+## A calculator that calculates the best combination to your clones
