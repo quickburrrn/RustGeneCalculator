@@ -3,7 +3,7 @@ import time
 import os
 from itertools import combinations
 import xml.etree.ElementTree as ET
-
+import csv
 
 def clear():
     os.system("cls")
@@ -21,7 +21,6 @@ class colors():
 
 
 def printcolor(message, color):
-    # return (color+text+colors.white)
     print(color, message, colors.white)
 
 
@@ -52,7 +51,7 @@ class Gene:
             self.value = 1.0
         elif (self.gene == ""):
             # null gene
-            self.value == 0.0
+            self.value = 0.0
         else:
             self.value = 0.6
 
@@ -61,7 +60,7 @@ class Gene:
             self.value = 1.0
         elif (self.gene == ""):
             # null gene
-            self.value == 0.0
+            self.value = 0.0
         else:
             self.value = 0.6
 
@@ -84,10 +83,10 @@ class seed:
         return
 
     def GetValue(self):
-        # virifies the seed
+        # verifies the seed
         self.VerifySeed()
 
-        # add togheter the gene values
+        # add together the gene values
         value = 0.0
         for i in range(len(self.genes)):
             value += self.genes[i].value
@@ -99,6 +98,7 @@ class seed:
 
 
 class Calculator:
+    #loads the seads
     def __init__(self):
         # takes data from seeds.xml
         self.Seeds = []
@@ -110,46 +110,15 @@ class Calculator:
         printcolor(f"succesfully loaded {len(self.Seeds)} seeds", colors.yellow)
         printcolor(f"estimated calculation time {210*2**(len(self.Seeds)-20)}s!", colors.yellow)
 
-
     def DebugSeed(self):
         # need to fix this
         for n in range(len(self.Seeds)):
             print(n+1, self.Seeds[n].GetSeedString())
 
-    # NOT IN USE
-    def GetSeeds(self):
-        # ask for how many seeds you have
-
-        # disabled for now
-        self.SeedCount = int(input("how many seeds shall i add to the equation? "))
-        print()
-
-        # prints warning if more than 8 seeds
-        if (self.SeedCount > 8):
-            printcolor("WARRNING gamebreaking mechanincs detected this might not work in game", colors.yellow)
-
-        print("You can now define the genes of each seed")
-        print("type the seed like this:GGGYYY")
-        print("you can only use the letters GYHWX")
-        print()
-
-        # disabled for now
-        for i in range(self.SeedCount):
-            print("write the stats for seed", i)
-            seed_ = ""
-            seed_ = input(": ")
-            self.Seeds.append(
-                seed(Gene(seed_[0]), Gene(seed_[1]), Gene(seed_[2]), Gene(seed_[3]), Gene(seed_[4]), Gene(seed_[5])));
-            print()
-
-        printcolor("success these are your seeds: ", colors.yellow)
-        for n in self.SeedCount:
-            print(n)
-
     def GetBestSeed(self, seeds):
 
         for n in range(len(seeds)):
-            seeds[n].VerifySeed();
+            seeds[n].VerifySeed()
 
         bestseed = 0
         bestscore = 2
@@ -164,7 +133,7 @@ class Calculator:
 
         # verfies the seeds
         for n in range(len(seeds)):
-            seeds[n].VerifySeed();
+            seeds[n].VerifySeed()
 
         # creates a list of all the genes each list inside the list is going to get calculated creating the result
         Genes = [[] for n in range(6)]
