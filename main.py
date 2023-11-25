@@ -3,7 +3,6 @@ import time
 import os
 from itertools import combinations
 import xml.etree.ElementTree as ET
-import csv
 
 def clear():
     os.system("cls")
@@ -229,7 +228,7 @@ while True:
     print("seeds : displays your current seeds")
     print("best : finds your best seed")
     print("crossbreed : crossbreed the seeds you select")
-    print("bruteforce : finds the best combinations using pure force this can take som time")
+    print("bruteforce : finds the best combinations using pure force this can take some time")
     print("clear : clears the console")
 
     request = input()
