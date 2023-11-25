@@ -3,6 +3,8 @@ A program that help you find your best combination for your seeds
 
 [![Python 3.6](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-360/)
 
+***
+
 ## Table of content
 
 - [Install](#install)
@@ -10,6 +12,8 @@ A program that help you find your best combination for your seeds
   - [Adding/Removing seeds](#addingremoving-seeds)
   - [Do stuff](#commands)
 - [Known Issue](#known-issues-and-bugs)
+
+***
 
 ## Install
 
@@ -31,6 +35,8 @@ Clone the GitHub repository
 git clone https://github.com/Norkart/PlanWasher.git
 ```
 
+***
+
 ## Usage
 
 ### Adding/Removing seeds
@@ -48,13 +54,13 @@ to add seeds add following line:
 
 example of `seeds.xml`:
 ```xml
-    <?xml version="1.0"?>
-    <Seeds>
-      <Seed genes = "HHGXGY"/>
-      <Seed genes = "GHYWHH"/>
-      <Seed genes = "XYHYGH"/>
-      <Seed genes = "WYYGGW"/>
-    </Seeds>
+<?xml version="1.0"?>
+<Seeds>
+  <Seed genes = "HHGXGY"/>
+  <Seed genes = "GHYWHH"/>
+  <Seed genes = "XYHYGH"/>
+  <Seed genes = "WYYGGW"/>
+</Seeds>
 ```
 
 
@@ -94,6 +100,8 @@ Finds the best seeds (NOT WORKING)
 ````
 best
 ````
+
+***
 
 ## known Issues and bugs
 
