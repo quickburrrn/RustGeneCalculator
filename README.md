@@ -33,6 +33,9 @@ git clone https://github.com/Norkart/PlanWasher.git
 
 ### Adding/Removing seeds
 
+> [!Note]
+>  Due to terrible performance it's recommended with 20 seeds max
+
 Open `seeds.xml` located inside the base folder
 
 to add seeds add following line:
@@ -52,8 +55,7 @@ example of `seeds.xml`:
     </Seeds>
 ```
 
-> ![Note]
->  Due to terrible performance it's recommended with 20 seeds max
+
 
 ### Commands
 
