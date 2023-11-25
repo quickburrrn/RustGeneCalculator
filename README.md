@@ -13,6 +13,8 @@ A program that help you find your best combination for your seeds
 
 ## Install
 
+Make shure that you have python-3 installed
+
 You have two options:
 
 #### Option 1
