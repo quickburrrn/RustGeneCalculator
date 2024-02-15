@@ -6,8 +6,13 @@ root = tree.getroot()
 
 app = Flask(__name__)
 
-@app.route('/hello', methods=['GET'])
+@app.route('/', methods=['GET'])
 def home():
+    return "Welcome to rust crossbreed API"
+
+
+@app.route('/hello', methods=['GET'])
+def hello():
     return "hello"
 
 @app.route('/add', methods=['PUT'])
