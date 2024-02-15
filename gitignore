@@ -1,3 +1,12 @@
 # files from pycharm
 .idea
 .idea/
+
+# files from vscode
+.vscode
+
+# files from compiling
+*.exe
+*.pdb
+*.dwarf
+target/
