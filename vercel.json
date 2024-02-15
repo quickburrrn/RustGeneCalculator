@@ -4,11 +4,5 @@
             "src": "Cargo.toml",
             "use": "@vercel/rust"
         }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "Cargo.toml"
-        }
-    ]   
+    ]
 }
